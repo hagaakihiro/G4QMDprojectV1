@@ -38,7 +38,7 @@ We developed $\alpha$ cluster model in this code. Also some modifications the po
 
 ### 2-1: Ad hoc $\alpha$ cluster model
 If the entryed nucleus is $^{12}$C or $^{16}$O, the nucleon positions are sampled with $\alpha$ cluster model
-using "samplingPosition_cluster" function (for detail, see [1]).
+using "samplingPosition_cluster" function (for detail, see [1]), where a parameter $a$ is set as 0.5 (safac in the code).
 
 ### 2-2: Others
 Parameter "radam" is used in the sampling of the nucleon position. In original code, this is calculated as radm = radious - rada * ( gamm - 1.0 ) + radb, and this gives radm = radious in the original JQMD parameter set. In the developed version, we used radm = radious directly, because the rest terms contribute to the radm in general Skyrme parameter sets, which the stable sampling makes difficult.
