@@ -1,6 +1,6 @@
 # G4QMDprojectV1 - 20211201 version
 
-We developed the QMD model in Geant4 by implementing modern Skyrme interaction parameter sets as well as by incorporating with an ad-hoc $\alpha$ cluster model in the initial nuclear state. The details can be described in ***.
+We developed the QMD model in Geant4 by implementing modern Skyrme interaction parameter sets as well as by incorporating with an ad-hoc $\alpha$ cluster model in the initial nuclear state. The details can be described in [1].
 
 This is developed based on the original QMD model in Geant4.10.07 Patch01 located at
 
@@ -37,18 +37,33 @@ We developed $\alpha$ cluster model in this code. Also some modifications the po
 If the entryed nucleus is $^{12}$C or $^{16}$O, the nucleon positions are sampled with $\alpha$ cluster model
 using "samplingPosition_cluster" function (for detail, see [1]).
 
-### 2-2: Ad hoc $\alpha$ cluster model
+### 2-2: Others
+Parameter "radam" is used in the sampling of the nucleon position. In original code, this is calculated as radm = radious - rada * ( gamm - 1.0 ) + radb, and this gives radm = radious in the original JQMD parameter set. In the developed version, we used radm = radious directly, because the rest terms contribute to the radm in general Skyrme parameter sets, which the stable sampling makes difficult.
+In addition, we ceals to evalute the single energy of nucleons in the momuntum sampling.
 
-
+The nuclear ground state is formed as the experimental binding energy is satistied within a certain threshold. In this evaluation, the Lorentz covariant version is also used.
 
 ## 3: Local(G4)MeanField.cc 
+This code simulates the system dynamics with mean field potential.
+We added the new paramters to allow to simulate with the general Skyrme interaction.
+In addition, the functions "CalDensityProfile" and "CalChargeDensityProfile" to calculate are added to calculate the expectation values of the system raius and charge radius, respectively, and the functions "GetSingleEnergy" and "GetTotalEnergy" are added to calculate the nucleon energy and total energy, respectively in the mean field potential.
 
 ## 4: Local(G4)Nucleus.cc 
+This code simulate the excitated nucleus as well as the ground state nucleus.
+Here, we added the new paramters to allow to simulate with the general Skyrme interaction.
+In addition, the Lorentz covariant version is also used in the evaluation of the excitation energy.
 
 ## 5: Local(G4)Parameters.cc 
+This code indicates the parameters in the model employed.
+We added 3 parameter sets, (SLy4, SkM*, and SIII) as well as the original JQMD one.
+Please use each parameter set by inserting or removing the comment out.
 
 ## 6: Local(G4)Participant.cc 
+Not changed in the present version.
 
 ## 7: Local(G4)Reaction.cc 
 
+
+
 ## 8: Local(G4)System.cc 
+Not changed in the present version.
