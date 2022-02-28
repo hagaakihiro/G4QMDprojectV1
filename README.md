@@ -4,7 +4,9 @@
 We developed the QMD model in Geant4 by implementing modern Skyrme interaction parameter sets as well as by incorporating with an ad-hoc $\alpha$ cluster model in the initial nuclear state. The details can be described in ***.
 
 This is developed based on the original QMD model in Geant4.10.07 Patch01 located at
+
 geant4.10.07.p01-install/source/processes/hadronic/models/qmd/
+
 , which is composed of eight source files,
 
 - G4QMDCollision.cc
