@@ -18,6 +18,7 @@ geant4.10.07.p01-install/source/processes/hadronic/models/qmd/
 - G4QMDSystem.cc
 
 and the corresponding eight include files. Here, we denote briefly the development in each file.
+We are preparing further developed version to remove other problems
 
 ## 1: Local(G4)QMDCollision.cc 
 This code simulates nucleon-nucleon collisions of all paticipant in inelastic nuclear collision during time evolution.
