@@ -62,8 +62,8 @@ Please use each parameter set by inserting or removing the comment out.
 Not changed in the present version.
 
 ## 7: Local(G4)Reaction.cc 
-
-
+This code manages inelastic nuclear collistion in QMD. 
+The modifications in this version are 1) to add system->clear() in line 735, which saves the unnatural proton diplication in trial loop in line 236, and 2) to allow the simulation of nucleon-nucleon and pion-nucleon scattering with this code.
 
 ## 8: Local(G4)System.cc 
 Not changed in the present version.
