@@ -13,7 +13,7 @@ This is developed based on the original QMD model in Geant4.10.07 Patch03, which
 - G4QMDParticipant.cc
 - G4QMDReaction.cc
 - G4QMDSystem.cc
-- 
+
 and the corresponding eight include files. Here, we denote briefly the development in each file.
 
 
