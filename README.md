@@ -24,7 +24,7 @@ We are preparing further developed version to remove other problems
 
 ## 1: Local(G4)QMDCollision.cc 
 This code simulates nucleon-nucleon collisions of all paticipant in inelastic nuclear collision during time evolution.
-In the present version, we modified two parts; for a treatment of short-lived particles (e.g. delta particle) and for the evaluation of energy conservation violation during nucleon-nucleon collision in matteer.
+In the present version, we modified two parts; for a treatment of short-lived particles (e.g. delta particle) and for the evaluation of energy conservation violation during nucleon-nucleon collision in matter.
 
 ### 1-1: A short-lived particle 
 Original code; when a short-lived particle (delta particle etc.) is produced in the nucleon-nucleon collision phase, the energy conservation is violated, due to the off-shell mass (original code uses on-shell mass). Tentatively we employ a short-lived particle as a decay mode, namely, a short-lived particle is immediately decayed if it is produced. This does not reflect the nature, but in the hadron therapy energy range, its contribution might be negligible, and we tentatively employ this handling.
@@ -49,7 +49,7 @@ The nuclear ground state is formed as the experimental binding energy is satisti
 ## 3: Local(G4)MeanField.cc 
 This code simulates the system dynamics with mean field potential.
 We added the new paramters to allow to simulate with the general Skyrme interaction.
-In addition, the functions "CalDensityProfile" and "CalChargeDensityProfile" to calculate are added to calculate the expectation values of the system raius and charge radius, respectively, and the functions "GetSingleEnergy" and "GetTotalEnergy" are added to calculate the nucleon energy and total energy, respectively in the mean field potential.
+In addition, the functions "CalDensityProfile" and "CalChargeDensityProfile" to calculate are added to calculate the expectation values of the system radius and charge radius, respectively, and the functions "GetSingleEnergy" and "GetTotalEnergy" are added to calculate the nucleon energy and total energy, respectively in the mean field potential.
 
 ## 4: Local(G4)Nucleus.cc 
 This code simulate the excitated nucleus as well as the ground state nucleus.
