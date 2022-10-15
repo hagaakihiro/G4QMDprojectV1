@@ -71,4 +71,4 @@ The modifications in this version are 1) to add system->clear() in line 735, whi
 ## 8: Local(G4)System.cc 
 Not changed in the present version.
 
-[1] Submitting to PMB
+[1] Y. Sato., et al., Development of a more accurate Geant4 quantum molecular dynamics model for hadron therapy, Physics in Medicine and Biology, 2022
